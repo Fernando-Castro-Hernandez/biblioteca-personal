@@ -1,0 +1,134 @@
+[
+  {
+    "orden": 0,
+    "titulo": "Portada",
+    "archivo": "00-portada.pdf",
+    "paginas": 3
+  },
+  {
+    "orden": 1,
+    "titulo": "Elogios",
+    "archivo": "01-elogios.pdf",
+    "paginas": 3
+  },
+  {
+    "orden": 2,
+    "titulo": "Créditos y derechos",
+    "archivo": "02-creditos-y-derechos.pdf",
+    "paginas": 3
+  },
+  {
+    "orden": 3,
+    "titulo": "Prefacio",
+    "archivo": "03-prefacio.pdf",
+    "paginas": 16
+  },
+  {
+    "orden": 4,
+    "titulo": "1. De programador a ingeniero",
+    "archivo": "04-capitulo-01-de-programador-a-ingeniero.pdf",
+    "paginas": 26
+  },
+  {
+    "orden": 5,
+    "titulo": "2. Lectura de código",
+    "archivo": "05-capitulo-02-lectura-de-codigo.pdf",
+    "paginas": 39
+  },
+  {
+    "orden": 6,
+    "titulo": "3. Escribir código",
+    "archivo": "06-capitulo-03-escribir-codigo.pdf",
+    "paginas": 36
+  },
+  {
+    "orden": 7,
+    "titulo": "4. Modelado",
+    "archivo": "07-capitulo-04-modelado.pdf",
+    "paginas": 32
+  },
+  {
+    "orden": 8,
+    "titulo": "5. Pruebas automatizadas",
+    "archivo": "08-capitulo-05-pruebas-automatizadas.pdf",
+    "paginas": 34
+  },
+  {
+    "orden": 9,
+    "titulo": "6. Exploración y modificación de sistemas desconocidos",
+    "archivo": "09-capitulo-06-exploracion-y-modificacion-de-sistemas-desconocidos.pdf",
+    "paginas": 53
+  },
+  {
+    "orden": 10,
+    "titulo": "7. Diseño de la interfaz de usuario",
+    "archivo": "10-capitulo-07-diseno-de-la-interfaz-de-usuario.pdf",
+    "paginas": 51
+  },
+  {
+    "orden": 11,
+    "titulo": "8. Trabajar con datos",
+    "archivo": "11-capitulo-08-trabajar-con-datos.pdf",
+    "paginas": 88
+  },
+  {
+    "orden": 12,
+    "titulo": "9. Arquitectura de software",
+    "archivo": "12-capitulo-09-arquitectura-de-software.pdf",
+    "paginas": 34
+  },
+  {
+    "orden": 13,
+    "titulo": "10. A producción",
+    "archivo": "13-capitulo-10-a-produccion.pdf",
+    "paginas": 73
+  },
+  {
+    "orden": 14,
+    "titulo": "11. Aumentar tu productividad",
+    "archivo": "14-capitulo-11-aumentar-tu-productividad.pdf",
+    "paginas": 25
+  },
+  {
+    "orden": 15,
+    "titulo": "12. Aprender a aprender",
+    "archivo": "15-capitulo-12-aprender-a-aprender.pdf",
+    "paginas": 32
+  },
+  {
+    "orden": 16,
+    "titulo": "13. Dominar las habilidades sociales en el mundo tecnológico",
+    "archivo": "16-capitulo-13-dominar-las-habilidades-sociales-en-el-mundo-tecnologico.pdf",
+    "paginas": 37
+  },
+  {
+    "orden": 17,
+    "titulo": "14. Gestión de la carrera profesional",
+    "archivo": "17-capitulo-14-gestion-de-la-carrera-profesional.pdf",
+    "paginas": 70
+  },
+  {
+    "orden": 18,
+    "titulo": "15. El ingeniero de software impulsado por la IA",
+    "archivo": "18-capitulo-15-el-ingeniero-de-software-impulsado-por-la-ia.pdf",
+    "paginas": 56
+  },
+  {
+    "orden": 19,
+    "titulo": "Índice alfabético",
+    "archivo": "19-indice-alfabetico.pdf",
+    "paginas": 37
+  },
+  {
+    "orden": 20,
+    "titulo": "Acerca de los autores",
+    "archivo": "20-acerca-de-los-autores.pdf",
+    "paginas": 2
+  },
+  {
+    "orden": 21,
+    "titulo": "Colofón",
+    "archivo": "21-colofon.pdf",
+    "paginas": 2
+  }
+]

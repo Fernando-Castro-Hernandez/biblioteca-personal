@@ -1,0 +1,193 @@
+[
+  {
+    "archivo": "00-portada.pdf",
+    "orden": 0,
+    "paginas": 3,
+    "bloques": 1,
+    "imagenes": 1,
+    "paginas_sin_contenido": [
+      1,
+      3
+    ]
+  },
+  {
+    "archivo": "01-elogios.pdf",
+    "orden": 1,
+    "paginas": 3,
+    "bloques": 19,
+    "imagenes": 0,
+    "paginas_sin_contenido": []
+  },
+  {
+    "archivo": "02-creditos-y-derechos.pdf",
+    "orden": 2,
+    "paginas": 3,
+    "bloques": 23,
+    "imagenes": 0,
+    "paginas_sin_contenido": []
+  },
+  {
+    "archivo": "03-prefacio.pdf",
+    "orden": 3,
+    "paginas": 16,
+    "bloques": 76,
+    "imagenes": 2,
+    "paginas_sin_contenido": []
+  },
+  {
+    "archivo": "04-capitulo-01-de-programador-a-ingeniero.pdf",
+    "orden": 4,
+    "paginas": 26,
+    "bloques": 111,
+    "imagenes": 0,
+    "paginas_sin_contenido": []
+  },
+  {
+    "archivo": "05-capitulo-02-lectura-de-codigo.pdf",
+    "orden": 5,
+    "paginas": 39,
+    "bloques": 185,
+    "imagenes": 12,
+    "paginas_sin_contenido": []
+  },
+  {
+    "archivo": "06-capitulo-03-escribir-codigo.pdf",
+    "orden": 6,
+    "paginas": 36,
+    "bloques": 147,
+    "imagenes": 0,
+    "paginas_sin_contenido": [
+      36
+    ]
+  },
+  {
+    "archivo": "07-capitulo-04-modelado.pdf",
+    "orden": 7,
+    "paginas": 32,
+    "bloques": 148,
+    "imagenes": 8,
+    "paginas_sin_contenido": []
+  },
+  {
+    "archivo": "08-capitulo-05-pruebas-automatizadas.pdf",
+    "orden": 8,
+    "paginas": 34,
+    "bloques": 209,
+    "imagenes": 1,
+    "paginas_sin_contenido": [
+      34
+    ]
+  },
+  {
+    "archivo": "09-capitulo-06-exploracion-y-modificacion-de-sistemas-desconocidos.pdf",
+    "orden": 9,
+    "paginas": 53,
+    "bloques": 373,
+    "imagenes": 6,
+    "paginas_sin_contenido": [
+      32
+    ]
+  },
+  {
+    "archivo": "10-capitulo-07-diseno-de-la-interfaz-de-usuario.pdf",
+    "orden": 10,
+    "paginas": 51,
+    "bloques": 221,
+    "imagenes": 16,
+    "paginas_sin_contenido": [
+      27,
+      38,
+      51
+    ]
+  },
+  {
+    "archivo": "11-capitulo-08-trabajar-con-datos.pdf",
+    "orden": 11,
+    "paginas": 88,
+    "bloques": 585,
+    "imagenes": 0,
+    "paginas_sin_contenido": []
+  },
+  {
+    "archivo": "12-capitulo-09-arquitectura-de-software.pdf",
+    "orden": 12,
+    "paginas": 34,
+    "bloques": 244,
+    "imagenes": 0,
+    "paginas_sin_contenido": []
+  },
+  {
+    "archivo": "13-capitulo-10-a-produccion.pdf",
+    "orden": 13,
+    "paginas": 73,
+    "bloques": 497,
+    "imagenes": 1,
+    "paginas_sin_contenido": []
+  },
+  {
+    "archivo": "14-capitulo-11-aumentar-tu-productividad.pdf",
+    "orden": 14,
+    "paginas": 25,
+    "bloques": 114,
+    "imagenes": 2,
+    "paginas_sin_contenido": []
+  },
+  {
+    "archivo": "15-capitulo-12-aprender-a-aprender.pdf",
+    "orden": 15,
+    "paginas": 32,
+    "bloques": 164,
+    "imagenes": 3,
+    "paginas_sin_contenido": []
+  },
+  {
+    "archivo": "16-capitulo-13-dominar-las-habilidades-sociales-en-el-mundo-tecnologico.pdf",
+    "orden": 16,
+    "paginas": 37,
+    "bloques": 172,
+    "imagenes": 2,
+    "paginas_sin_contenido": []
+  },
+  {
+    "archivo": "17-capitulo-14-gestion-de-la-carrera-profesional.pdf",
+    "orden": 17,
+    "paginas": 70,
+    "bloques": 526,
+    "imagenes": 0,
+    "paginas_sin_contenido": []
+  },
+  {
+    "archivo": "18-capitulo-15-el-ingeniero-de-software-impulsado-por-la-ia.pdf",
+    "orden": 18,
+    "paginas": 56,
+    "bloques": 340,
+    "imagenes": 1,
+    "paginas_sin_contenido": []
+  },
+  {
+    "archivo": "19-indice-alfabetico.pdf",
+    "orden": 19,
+    "paginas": 37,
+    "bloques": 983,
+    "imagenes": 1,
+    "paginas_sin_contenido": []
+  },
+  {
+    "archivo": "20-acerca-de-los-autores.pdf",
+    "orden": 20,
+    "paginas": 2,
+    "bloques": 3,
+    "imagenes": 0,
+    "paginas_sin_contenido": [
+      2
+    ]
+  },
+  {
+    "archivo": "21-colofon.pdf",
+    "orden": 21,
+    "paginas": 2,
+    "bloques": 5,
+    "imagenes": 0,
+    "paginas_sin_contenido": []
+  }
+]
