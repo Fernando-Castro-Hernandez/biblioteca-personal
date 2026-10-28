@@ -47,6 +47,9 @@ Para leer sin conexión, abrir `lector/index.html` en un navegador. No necesita 
 - Temas claro, sepia y oscuro; ajustes de tipografía, tamaño, interlineado y ancho.
 - Subrayados en cinco colores y cuatro trazos, con tres grosores.
 - Notas asociadas a pasajes, edición y borrado con opción de deshacer.
+- Lienzo con lápiz libre, marcador, flechas, rectángulos, elipses y borrador.
+- Menú semicircular lateral plegable y ocultable; selección, movimiento, duplicado y edición de dibujos.
+- Marcas sobre imágenes que también se ven al ampliarlas; dibujos incluidos en los respaldos.
 - Cuaderno con búsqueda, filtro por capítulo y acceso al texto original.
 - Marcadores, notas por capítulo y recuperación de posición.
 - Modo enfoque e imágenes ampliables.

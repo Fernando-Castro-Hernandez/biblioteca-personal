@@ -10,7 +10,7 @@ beforeEach(()=>{localStorage.clear();});
 test('migra un respaldo v1 manteniendo notas, marcadores, posición y preferencias',()=>{
  const old={chapter:4,anchor:block.id,offset:45,theme:'sepia',size:'24',marks:[{chapter:4,anchor:block.id,title:'Pasaje'}],notes:{4:'Mi nota anterior'}};
  localStorage.setItem(BOOK_KEY,JSON.stringify(old));const {state}=loadState();
- expect(state).toMatchObject({...old,size:24,version:2,annotations:[]});expect(parseBackup(backup(old)).notes['4']).toBe('Mi nota anterior');
+ expect(state).toMatchObject({...old,size:24,version:3,annotations:[],drawings:[]});expect(parseBackup(backup(old)).notes['4']).toBe('Mi nota anterior');
 });
 test('exportar e importar conserva varios colores, trazos y notas sin duplicar',()=>{
  const original={...DEFAULT,annotations:[a,{...a,id:'two',color:'rose' as const,pen:'wave' as const}],notes:{4:'Contexto'}};

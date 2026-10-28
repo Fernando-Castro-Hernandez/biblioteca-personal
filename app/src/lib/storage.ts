@@ -1,14 +1,16 @@
 import { BOOK, BOOK_KEY, blockById, plainRich } from './book';
 import { COLORS, TOOLS, type Annotation, type Ink, type Pen } from './annotations';
+import { validDrawing, type Drawing } from './drawings';
 
 export interface Bookmark { chapter: number; anchor: string; title: string }
 export interface ReaderState {
-  version: 2; chapter: number; anchor: string; offset: number;
+  version: 3; chapter: number; anchor: string; offset: number;
   theme: 'light' | 'sepia' | 'dark'; size: number; font: 'serif' | 'sans'; leading: string; width: string;
   marks: Bookmark[]; notes: Record<string, string>; annotations: Annotation[];
   ink: Ink; pen: Pen; weight: number;
+  drawings: Drawing[]; canvasHidden: boolean; drawingColor: Ink; drawingWeight: number;
 }
-export const DEFAULT: ReaderState = { version: 2, chapter: 3, anchor: '', offset: 0, theme: 'light', size: 21, font: 'serif', leading: '1.85', width: '740', marks: [], notes: {}, annotations: [], ink: 'yellow', pen: 'highlighter', weight: 2 };
+export const DEFAULT: ReaderState = { version: 3, chapter: 3, anchor: '', offset: 0, theme: 'light', size: 21, font: 'serif', leading: '1.85', width: '740', marks: [], notes: {}, annotations: [], ink: 'yellow', pen: 'highlighter', weight: 2, drawings: [], canvasHidden: false, drawingColor: 'blue', drawingWeight: 2 };
 const record = (v: unknown): v is Record<string, unknown> => !!v && typeof v === 'object' && !Array.isArray(v);
 const validChapter = (c: unknown): c is number => Number.isInteger(c) && Number(c) >= 0 && Number(c) < BOOK.length;
 const string = (s: unknown): s is string => typeof s === 'string';
@@ -37,6 +39,10 @@ export function normalizeState(input: unknown): ReaderState {
   if (Array.isArray(input.marks)) out.marks = input.marks.filter(validMark);
   if (record(input.notes)) out.notes = Object.fromEntries(Object.entries(input.notes).filter(([key,value]) => /^\d+$/.test(key) && validChapter(Number(key)) && string(value)) as [string,string][]);
   if (Array.isArray(input.annotations)) out.annotations = input.annotations.filter(validAnnotation);
+  if (Array.isArray(input.drawings)) out.drawings = input.drawings.filter(validDrawing);
+  if (typeof input.canvasHidden === 'boolean') out.canvasHidden = input.canvasHidden;
+  if (COLORS.some(c => c.id === input.drawingColor)) out.drawingColor = input.drawingColor as Ink;
+  if ([1,2,3].includes(input.drawingWeight as number)) out.drawingWeight = input.drawingWeight as number;
   if (COLORS.some(c => c.id === input.ink)) out.ink = input.ink as Ink;
   if (TOOLS.some(t => t.id === input.pen)) out.pen = input.pen as Pen;
   if ([1,2,3].includes(Number(input.weight))) out.weight = Number(input.weight);
@@ -61,6 +67,7 @@ export function parseBackup(text: string): ReaderState {
   const s = payload.state;
   if (!validChapter(s.chapter) || !Array.isArray(s.marks) || !s.marks.every(validMark) || !record(s.notes) || !Object.entries(s.notes).every(([k,v]) => /^\d+$/.test(k) && validChapter(Number(k)) && string(v))) throw Error('El respaldo contiene datos de lectura inválidos.');
   if (s.annotations !== undefined && (!Array.isArray(s.annotations) || !s.annotations.every(validAnnotation))) throw Error('Hay anotaciones que no corresponden al texto de este libro. No se importó ningún cambio.');
+  if (s.drawings !== undefined && (!Array.isArray(s.drawings) || !s.drawings.every(validDrawing))) throw Error('El respaldo contiene dibujos inválidos. No se importó ningún cambio.');
   return normalizeState(s);
 }
 export function mergeBackup(current: ReaderState, incoming: ReaderState): ReaderState {
@@ -82,5 +89,7 @@ export function mergeBackup(current: ReaderState, incoming: ReaderState): Reader
     if (!notes[key]) notes[key] = value;
     else if (!notes[key].includes(value)) notes[key] += '\n\n' + value;
   });
-  return { ...current, marks: [...marks.values()], annotations: [...annotations.values()], notes };
+  const drawings = new Map(current.drawings.map(d => [d.id,d]));
+  incoming.drawings.forEach(d => { const old=drawings.get(d.id); if(!old || d.updatedAt>old.updatedAt)drawings.set(d.id,d); });
+  return { ...current, marks: [...marks.values()], annotations: [...annotations.values()], drawings:[...drawings.values()], notes };
 }

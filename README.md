@@ -269,11 +269,35 @@ El lector incluye búsqueda, índice, modo enfoque, imágenes ampliables, marcad
 3. Pulsar **Marcar texto** o **Añadir nota**.
 4. Abrir **Mi cuaderno** para buscar las anotaciones, filtrarlas por capítulo o regresar al pasaje.
 
-Pulsar un texto marcado permite cambiar su color, trazo y nota, o eliminarlo. Después de eliminar hay una opción **Deshacer**. Los trazos se aplican a texto seleccionado; no son dibujo a mano alzada.
+Pulsar un texto marcado permite cambiar su color, trazo y nota, o eliminarlo. Después de eliminar hay una opción **Deshacer**. Para borrar directamente, usar el **Borrador** del lienzo o **Quitar marcas** al seleccionar un pasaje ya anotado.
 
 ![Biblioteca Mïo](docs/imagenes/biblioteca.jpg)
 
 [Ver los controles de anotación](docs/imagenes/anotaciones.jpg)
+
+### 🎨 El libro como lienzo
+
+Abrir el **engrane «Lienzo»** del costado derecho. El menú semicircular reúne:
+
+| Herramienta | Para qué la uso |
+| --- | --- |
+| Lápiz libre | Escribir y dibujar a mano alzada sobre el contenido. |
+| Marcador libre | Resaltar una zona con un trazo translúcido. |
+| Flecha | Señalar una parte del texto o de una ilustración. |
+| Rectángulo y elipse | Enmarcar componentes, diagramas o ideas. |
+| Seleccionar y mover | Reubicar, recolorear, duplicar o eliminar un dibujo. |
+| Borrador | Eliminar dibujos y subrayados al pasar sobre ellos. |
+
+Elegir una herramienta y arrastrar sobre el libro. El panel permite cambiar el color y el grosor, **deshacer y rehacer** y limpiar las marcas del capítulo. Los dibujos aparecen también en **Mi cuaderno → Dibujos** y en las imágenes ampliadas.
+
+**Escape** vuelve al modo lectura. El engrane pliega el menú; **Ocultar** lo retira de la vista y el botón del lápiz en la barra superior permite recuperarlo. Ocultar las herramientas conserva todos los dibujos.
+
+Para trabajar con teclado: elegir un dibujo desde la lista de selección, salir de la lista con Tab y usar las flechas para moverlo; Mayús aumenta el desplazamiento. Supr/Retroceso elimina el dibujo seleccionado. En modo lienzo, ⌘/Ctrl Z deshace y ⌘/Ctrl Mayús Z rehace.
+
+Los dibujos se guardan automáticamente en el navegador y se incluyen en los respaldos JSON. Las marcas se vinculan al texto o a la imagen correspondiente para acompañar los cambios de tamaño. Las operaciones de deshacer y rehacer están disponibles durante la sesión abierta; el contenido guardado permanece al recargar.
+
+![Lienzo y menú semicircular](docs/imagenes/lienzo.jpg)
+
 
 Las anotaciones, notas y marcadores se guardan en el navegador, **no en GitHub**. En **Ajustes de lectura → Exportar respaldo** se descarga un JSON con todos ellos. **Importar respaldo** combina los datos y conserva las notas existentes. Conviene exportar antes de mover la carpeta, cambiar de navegador o borrar sus datos.
 
@@ -287,4 +311,4 @@ Crear una carpeta `libros/nombre-del-libro/` con su ficha e índice. Guardar ah�
 
 ---
 
-**Biblioteca privada para mi estudio personal.** Los libros, sus portadas y sus ilustraciones pertenecen a sus respectivos autores y editoriales. Las notas y presentaciones recogen mi proceso de aprendizaje; las fuentes de la presentación están en sus notas.
+**Biblioteca para mi estudio personal.** Los libros, sus portadas y sus ilustraciones pertenecen a sus respectivos autores y editoriales. Las notas y presentaciones recogen mi proceso de aprendizaje; las fuentes de la presentación están en sus notas.
