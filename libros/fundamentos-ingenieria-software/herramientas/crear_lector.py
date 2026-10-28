@@ -98,6 +98,5 @@ for ci,entry in enumerate(manifest):
  report.append({'archivo':f.name,'orden':seq,'paginas':len(d),'bloques':len(blocks),'imagenes':images,'paginas_sin_contenido':empty})
 (OUT/'conversion.json').write_text(json.dumps(report,ensure_ascii=False,indent=2))
 (ROOT/'herramientas'/'book.json').write_text(json.dumps(chapters,ensure_ascii=False))
-template=(ROOT/'herramientas'/'lector.template.html').read_text()
-(OUT/'index.html').write_text(template.replace('/*BOOK_DATA*/',json.dumps(chapters,ensure_ascii=False).replace('</','<\\/')))
 print(json.dumps({'archivos':len(chapters),'paginas':sum(c['pages'] for c in chapters),'palabras':sum(c['words'] for c in chapters),'imagenes':sum(r['imagenes'] for r in report)},ensure_ascii=False))
+print('Datos extraídos. Para actualizar la biblioteca con shadcn/ui: npm --prefix ../../../app run build (desde esta carpeta de herramientas).')

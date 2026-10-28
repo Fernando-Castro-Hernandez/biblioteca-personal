@@ -11,3 +11,8 @@ __pycache__/
 !.env.example
 *.log
 ~$*
+node_modules/
+app/dist/
+app/test-results/
+app/playwright-report/
+*.tsbuildinfo

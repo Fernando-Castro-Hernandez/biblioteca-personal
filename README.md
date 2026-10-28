@@ -234,7 +234,9 @@ Una exposición desde mi perspectiva como junior: qué he aprendido del libro y 
 ```text
 📚 biblioteca-personal/
 ├── README.md
-├── Abrir libro.html
+├── Abrir libro.html    # Acceso directo a la biblioteca
+├── biblioteca.html
+├── app/                # React, TypeScript y componentes shadcn/ui
 ├── entregas/
 │   └── fundamentos-ingenieria-software/
 │       └── capitulos-01-05/
@@ -255,12 +257,29 @@ Una exposición desde mi perspectiva como junior: qué he aprendido del libro y 
 ## 💻 Leer en mi computadora
 
 1. Descargar el repositorio o clonarlo con mi cuenta de GitHub.
-2. Abrir `Abrir libro.html` con Chrome, Safari o Edge.
+2. Abrir `biblioteca.html` (o `Abrir libro.html`) con el navegador.
 3. Elegir el capítulo y ajustar el tema, tamaño de letra e interlineado.
 
-El lector incluye búsqueda, índice, modo enfoque, imágenes ampliables, marcadores, notas y guardado de posición. No requiere internet ni un servidor.
+El lector incluye búsqueda, índice, modo enfoque, imágenes ampliables, marcadores, notas y guardado de posición. La interfaz utiliza componentes **shadcn/ui**, con temas claro, sepia y oscuro. No requiere instalar Node, internet ni un servidor para leer.
 
-Las notas y los marcadores se guardan en el navegador, **no en GitHub**. Para trasladarlos entre navegadores o ubicaciones, usar la exportación e importación de respaldo del menú **Aa**.
+### 🖍️ Subrayar y conservar ideas
+
+1. Seleccionar un fragmento del texto.
+2. Elegir uno de los **cinco colores**, el grosor y el trazo: **resaltador, bolígrafo, lápiz discontinuo u ondulado**.
+3. Pulsar **Marcar texto** o **Añadir nota**.
+4. Abrir **Mi cuaderno** para buscar las anotaciones, filtrarlas por capítulo o regresar al pasaje.
+
+Pulsar un texto marcado permite cambiar su color, trazo y nota, o eliminarlo. Después de eliminar hay una opción **Deshacer**. Los trazos se aplican a texto seleccionado; no son dibujo a mano alzada.
+
+![Biblioteca Mïo](docs/imagenes/biblioteca.jpg)
+
+[Ver los controles de anotación](docs/imagenes/anotaciones.jpg)
+
+Las anotaciones, notas y marcadores se guardan en el navegador, **no en GitHub**. En **Ajustes de lectura → Exportar respaldo** se descarga un JSON con todos ellos. **Importar respaldo** combina los datos y conserva las notas existentes. Conviene exportar antes de mover la carpeta, cambiar de navegador o borrar sus datos.
+
+Se conserva la ruta del lector y la clave de almacenamiento anterior para recuperar las notas existentes. Si utilizabas otra copia o ubicación del HTML, exporta desde ella e importa el respaldo en esta biblioteca.
+
+Para modificar o reconstruir la interfaz, consultar la [guía técnica de la aplicación](app/README.md).
 
 ## 📬 Agregar la siguiente lectura
 

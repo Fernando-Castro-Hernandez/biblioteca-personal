@@ -45,9 +45,12 @@ Para leer sin conexión, abrir `lector/index.html` en un navegador. No necesita 
 
 - Índice por capítulos y secciones; búsqueda en todo el libro.
 - Temas claro, sepia y oscuro; ajustes de tipografía, tamaño, interlineado y ancho.
+- Subrayados en cinco colores y cuatro trazos, con tres grosores.
+- Notas asociadas a pasajes, edición y borrado con opción de deshacer.
+- Cuaderno con búsqueda, filtro por capítulo y acceso al texto original.
 - Marcadores, notas por capítulo y recuperación de posición.
 - Modo enfoque e imágenes ampliables.
-- Exportación e importación de notas y marcadores desde el menú **Aa**.
+- Exportación e importación de anotaciones, notas y marcadores desde **Ajustes de lectura**.
 
 Los datos personales de lectura permanecen en el almacenamiento del navegador. Exportar un respaldo antes de cambiar de navegador, mover la carpeta o borrar sus datos.
 
@@ -55,7 +58,7 @@ La conversión reorganiza los archivos, une líneas partidas y conserva las imá
 
 ## Reconstruir el lector
 
-Solo hace falta Python para regenerarlo; **leer el HTML no requiere Python**.
+La extracción de los PDF utiliza Python; la interfaz React con shadcn/ui se compila con Node.js. **Leer el HTML ya generado no requiere instalar ninguno de los dos**.
 
 Desde esta carpeta:
 
@@ -63,9 +66,11 @@ Desde esta carpeta:
 python3 -m venv .venv
 .venv/bin/python -m pip install -r herramientas/requirements.txt
 .venv/bin/python herramientas/crear_lector.py
+npm --prefix ../../app ci
+npm --prefix ../../app run build
 ```
 
-`pdfs/indice.json` establece el orden y los títulos. El generador utiliza los PDFs para reconstruir `lector/index.html`, las imágenes, `herramientas/book.json` y el informe `lector/conversion.json`.
+`pdfs/indice.json` establece el orden y los títulos. El generador extrae las imágenes, `herramientas/book.json` y el informe `lector/conversion.json`. La compilación de `app/` incorpora ese contenido a `lector/index.html` y actualiza los accesos a la biblioteca. Para cambiar solo la interfaz no es necesario repetir la extracción. Consulta la [guía técnica](../../app/README.md).
 
 Las figuras y la portada proceden de los PDFs suministrados. Se conserva su autoría original.
 
